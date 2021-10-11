@@ -1,0 +1,40 @@
+﻿<Window x:Class="Kontolnaya.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kontolnaya"
+        mc:Ignorable="d"
+        Title="Registration" Height="450" Width="800">
+    <Grid>
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel Margin="0,0,0,0">
+                <Label x:Name="labelReg" Content="Регистрация" HorizontalAlignment="Center" FontSize="18" Margin="0 0 0 10"/>
+                <Grid>
+                    <Label x:Name="LabelRegLogin" Content="Логин" FontSize="14"/>
+                    <TextBox x:Name="textBoxRegLogin"  CaretBrush="#FF008BFF" SelectionBrush="#FF008BFF" FontFamily="Comic Sans MS" Margin="90,0,0,0"/>
+                </Grid>
+                <Grid Margin="0 10 0 0">
+                    <Label x:Name="LabelRegPass" Content="Пароль" FontSize="14"/>
+                    <PasswordBox x:Name="passBox"  CaretBrush="#FF008BFF" SelectionBrush="#FF008BFF" FontFamily="Comic Sans MS" Margin="90 0 0 0"/>
+                </Grid>
+                <Grid Margin="0 10 0 0">
+                    <Label x:Name="LabelRegPass2" Content="Пароль" FontSize="14"/>
+                    <PasswordBox x:Name="passBox2"  CaretBrush="#FF008BFF" SelectionBrush="#FF008BFF" FontFamily="Comic Sans MS" Margin="90 0 0 0"/>
+                </Grid>
+                <Grid Margin="0 10 0 0">
+                    <TextBox x:Name="textBoxRegCaptca" Text=""  FontFamily="Curlz MT" Margin="0,0,245,0" IsReadOnly="True"/>
+                    <Button x:Name="buttonCaptcha" Content="Сгенерировать капчу" Margin="250 0 0 0" Background="#FFACACAC" BorderBrush="#FFACACAC" Foreground="White" Height="26" Click="buttonCaptcha_Click"/>
+                </Grid>
+                <Grid Margin="0 10 0 0">
+                    <Label x:Name="LabelRegCaptcha" Content="Введите капчу" FontSize="14"/>
+                    <TextBox x:Name="textBoxCaptcha"  CaretBrush="#FF008BFF" SelectionBrush="#FF008BFF" FontFamily="Comic Sans MS" Margin="111,0,0,0"/>
+                </Grid>
+                <Button x:Name="buttonReg" Content="Зарегестрироваться" Margin="100 20 100 0" Background="#FFACACAC" BorderBrush="#FFACACAC" Foreground="White" Height="26" Click="buttonReg_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
